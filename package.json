@@ -1,0 +1,42 @@
+{
+  "name": "express-prisma-credit-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --project './tsconfig.json'",
+    "start": "tsc --project './tsconfig.json' & npx nodemon ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "npx prisma migrate dev --name user-entity && npx prisma generate",
+    "push": "npx prisma db push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anhntt0712/express-prisma-credit-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anhntt0712/express-prisma-credit-react/issues"
+  },
+  "homepage": "https://github.com/anhntt0712/express-prisma-credit-react#readme",
+  "dependencies": {
+    "@prisma/client": "^4.9.0",
+    "axios": "^1.3.2",
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
+    "express-redis-cache": "^1.1.3",
+    "jsonwebtoken": "^9.0.0",
+    "redis": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.17",
+    "@types/express-redis-cache": "^1.1.2",
+    "@types/jsonwebtoken": "^9.0.1",
+    "@types/node": "^18.11.18",
+    "prisma": "^4.9.0",
+    "typescript": "^4.9.5"
+  }
+}
